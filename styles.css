@@ -401,7 +401,13 @@ p { margin: 0 0 1em; }
 .site-footer nav a:hover { color: var(--yellow); text-decoration: underline; }
 .footer-grid p { margin: .6em 0; }
 .social-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.icon { width: 1.05em; height: 1.05em; fill: currentColor; flex: none; }
+.card h3 { display: flex; align-items: center; gap: 10px; }
+.card h3 .icon { color: var(--star-red); }
 .social-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: #fff;
   text-decoration: none;
   font-family: var(--font-display);

@@ -32,6 +32,12 @@ const NAV = [
   ['Contact', '/contact/', 'contact'],
 ];
 
+const ICONS = Object.fromEntries(await Promise.all(['itchdotio', 'patreon', 'youtube', 'x', 'reddit'].map(async (n) => {
+  const svg = await fs.readFile(path.join(ROOT, 'assets', 'icons', `.svg`), 'utf8');
+  const d = svg.match(/<path d="([^"]+)"/)[1];
+  return [n, `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`];
+})));
+
 const ext = (href) => `href="${href}" target="_blank" rel="noopener"`;
 
 const wordmark = '<span class="wordmark"><span>Isthmus</span><span class="games">Games</span></span>';
@@ -61,11 +67,11 @@ const footer = (trailerNote = false) => `
         </div>
         <p>An independent game studio from Panama.</p>
         <p class="social-row">
-          <a ${ext(LINKS.itch)}>itch.io</a>
-          <a ${ext(LINKS.patreon)}>Patreon</a>
-          <a ${ext(LINKS.youtube)}>YouTube</a>
-          <a ${ext(LINKS.x)}>X</a>
-          <a ${ext(LINKS.reddit)}>Reddit</a>
+          <a ${ext(LINKS.itch)}>${ICONS.itchdotio}itch.io</a>
+          <a ${ext(LINKS.patreon)}>${ICONS.patreon}Patreon</a>
+          <a ${ext(LINKS.youtube)}>${ICONS.youtube}YouTube</a>
+          <a ${ext(LINKS.x)}>${ICONS.x}X</a>
+          <a ${ext(LINKS.reddit)}>${ICONS.reddit}Reddit</a>
         </p>
       </div>
       <nav aria-label="Footer">
@@ -211,27 +217,27 @@ const FAQ_LD = {
 const followCards = `
         <div class="cards">
           <a class="card" ${ext(LINKS.game)}>
-            <h3>Play on itch.io</h3>
+            <h3>${ICONS.itchdotio}Play on itch.io</h3>
             <p>Open your first restaurant in the browser, then leave a comment to tell us what to add next.</p>
             <span class="card-link">isthmusgames.itch.io</span>
           </a>
           <a class="card" ${ext(LINKS.patreon)}>
-            <h3>Support us on Patreon</h3>
+            <h3>${ICONS.patreon}Support us on Patreon</h3>
             <p>Get playtest builds early, vote on the next cuisine and get your name in the credits.</p>
             <span class="card-link">patreon.com/isthmusgames</span>
           </a>
           <a class="card" ${ext(LINKS.youtube)}>
-            <h3>Watch on YouTube</h3>
+            <h3>${ICONS.youtube}Watch on YouTube</h3>
             <p>Trailers and update videos for Neighborhood Kitchen.</p>
             <span class="card-link">@IsthmusGames</span>
           </a>
           <a class="card" ${ext(LINKS.x)}>
-            <h3>Follow on X</h3>
+            <h3>${ICONS.x}Follow on X</h3>
             <p>Short updates from the studio between devlogs.</p>
             <span class="card-link">@IsthmusGamesHQ</span>
           </a>
           <a class="card" ${ext(LINKS.reddit)}>
-            <h3>Find us on Reddit</h3>
+            <h3>${ICONS.reddit}Find us on Reddit</h3>
             <p>Development notes and replies to player questions.</p>
             <span class="card-link">u/IsthmusGamesHQ</span>
           </a>
