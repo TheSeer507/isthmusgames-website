@@ -414,6 +414,7 @@ p { margin: 0 0 1em; }
 .social-row a:hover { background: var(--yellow); border-color: var(--yellow); color: var(--navy); }
 .footer-base { margin-top: 28px; padding-top: 18px; border-top: 2px solid rgba(255, 255, 255, .18); }
 .footer-base p { margin: 0 0 .3em; }
+.site-footer .fineprint { color: #dbe8fb; }
 
 .section-head { max-width: 720px; margin-bottom: 36px; }
 

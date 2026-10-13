@@ -421,8 +421,7 @@ pages.push(page({
           <p class="eyebrow">Screenshots</p>
           <h2>A look inside</h2>
         </div>
-        <div class="shots shots-wide">
-          ${shot('nk-copper-pot-evening', 'Evening service', 'The same restaurant in the evening, lit by warm lamps and a glowing jukebox')}
+        <div class="shots shots-three">
           ${shot('nk-ice-cream', 'Ice cream corner', 'An ice cream parlor with a checkered floor, pink chairs and cooks scooping sundaes', 1280, 720)}
           ${shot('nk-pumpkin-porch', 'Kitchen garden', 'A restaurant decorated for autumn, with guests in wide hats and a pumpkin patch in the garden')}
           ${shot('nk-halloween', 'Harvest &amp; Haunts', 'A Halloween themed restaurant with dark floors, guests in witch hats and pumpkin decorations', 1280, 720)}
