@@ -3,41 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'none'; object-src 'none'">
   <title>IsthmusGames | Indie game studio from Panama</title>
   <meta name="description" content="IsthmusGames is an independent game studio from Panama. Play Neighborhood Kitchen, our cozy restaurant game, free in your browser.">
-  <meta name="theme-color" content="#22b0c2">
+  <meta name="theme-color" content="#16498c">
   <link rel="canonical" href="https://isthmusgames.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="IsthmusGames">
   <meta property="og:title" content="IsthmusGames | Indie game studio from Panama">
-  <meta property="og:description" content="Play Neighborhood Kitchen, our cozy restaurant game, free in your browser.">
+  <meta property="og:description" content="IsthmusGames is an independent game studio from Panama. Play Neighborhood Kitchen, our cozy restaurant game, free in your browser.">
   <meta property="og:url" content="https://isthmusgames.com/">
   <meta property="og:image" content="https://isthmusgames.com/assets/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@IsthmusGamesHQ">
 
-  <link rel="icon" href="assets/emblem.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/icon-512.png" type="image/png" sizes="512x512">
-  <link rel="apple-touch-icon" href="assets/icon-180.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/emblem.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icon-180.png">
+  <link rel="preload" href="/assets/emblem-island.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"IsthmusGames","url":"https://isthmusgames.com","logo":"https://isthmusgames.com/assets/icon-512.png","email":"press@isthmusgames.com","description":"An independent game studio from Panama.","foundingLocation":{"@type":"Country","name":"Panama"},"founder":{"@type":"Person","name":"Hasan Patel"},"sameAs":["https://isthmusgames.itch.io","https://www.patreon.com/isthmusgames","https://www.youtube.com/@IsthmusGames","https://x.com/IsthmusGamesHQ"]}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="#top" aria-label="IsthmusGames home">
-        <img src="assets/emblem-island.svg" alt="" width="54" height="32">
+      <a class="brand" href="/" aria-label="IsthmusGames home">
+        <img src="/assets/emblem-island.svg" alt="" width="54" height="32">
         <span class="wordmark"><span>Isthmus</span><span class="games">Games</span></span>
       </a>
       <nav aria-label="Main">
-        <a href="#game">Our game</a>
-        <a href="#studio">Studio</a>
-        <a href="#follow">Follow</a>
+        <a href="/neighborhood-kitchen/">Our game</a>
+        <a href="/news/">News</a>
+        <a href="/about/">About</a>
+        <a href="/press/">Press</a>
+        <a href="/contact/">Contact</a>
       </nav>
       <a class="btn btn-small btn-primary" href="https://isthmusgames.itch.io/neighborhood-kitchen" target="_blank" rel="noopener">Play free</a>
     </div>
@@ -62,11 +67,11 @@
           <p class="lede">We are IsthmusGames, a tiny indie studio in Panama. Our first game, <strong>Neighborhood Kitchen</strong>, is out now and free to play in your browser.</p>
           <div class="actions">
             <a class="btn btn-primary" href="https://isthmusgames.itch.io/neighborhood-kitchen" target="_blank" rel="noopener">Play Neighborhood Kitchen</a>
-            <a class="btn btn-ghost" href="#game">See the game</a>
+            <a class="btn btn-ghost" href="/neighborhood-kitchen/">About the game</a>
           </div>
         </div>
         <div class="hero-art">
-          <img src="assets/emblem-island.svg" alt="IsthmusGames emblem: a green island shaped like a game controller, with a blue star and a red star" width="930" height="540">
+          <img src="/assets/emblem-island.svg" alt="IsthmusGames emblem: a green island shaped like a game controller, with a blue star and a red star" width="930" height="540" fetchpriority="high">
         </div>
       </div>
     </section>
@@ -81,43 +86,24 @@
 
         <div class="game-grid">
           <div class="game-copy">
-            <p>Start with a tiny corner café and make it yours. Arrange the tables, choose your dishes and watch your chibi team cook, serve and clean. Spend your next handful of coins on a new recipe, another cook or the perfect piece of furniture.</p>
-            <p>Run an Italian trattoria, a Japanese kitchen, a Greek taverna or an all-day diner. Grow a few ingredients outside and turn first-time guests into neighborhood regulars.</p>
-
+            <p>Start with a tiny corner café and make it yours. Arrange the tables, choose your dishes and watch your chibi team cook, serve and clean.</p>
             <ul class="stats">
               <li><strong>62</strong><span>recipes to discover and master</span></li>
               <li><strong>13</strong><span>neighbors to get to know</span></li>
               <li><strong>6</strong><span>neighbor restaurants to visit</span></li>
               <li><strong>Free</strong><span>no ads, no in-game purchases</span></li>
             </ul>
-
             <div class="actions">
               <a class="btn btn-primary" href="https://isthmusgames.itch.io/neighborhood-kitchen" target="_blank" rel="noopener">Play free on itch.io</a>
+              <a class="btn btn-outline" href="/neighborhood-kitchen/">About the game</a>
             </div>
             <p class="fineprint">Single-player · Runs in your browser, no download · Desktop recommended · In development, with new updates almost every week.</p>
           </div>
-
-          <a class="shot shot-main" href="assets/nk-copper-pot-day.jpg" target="_blank" rel="noopener">
-            <img src="assets/nk-copper-pot-day.jpg" alt="A busy lunch rush in a Neighborhood Kitchen restaurant, with guests at every table and three cooks in an open kitchen" width="1440" height="900">
-          </a>
-        </div>
-
-        <div class="shots">
-          <a class="shot" href="assets/nk-copper-pot-evening.jpg" target="_blank" rel="noopener">
-            <img loading="lazy" src="assets/nk-copper-pot-evening.jpg" alt="The same restaurant in the evening, lit by warm lamps and a glowing jukebox" width="1440" height="900">
-            <span>Evening service</span>
-          </a>
-          <a class="shot" href="assets/nk-ice-cream.jpg" target="_blank" rel="noopener">
-            <img loading="lazy" src="assets/nk-ice-cream.jpg" alt="An ice cream parlor with a checkered floor, pink chairs and cooks scooping sundaes" width="1280" height="720">
-            <span>Ice cream corner</span>
-          </a>
-          <a class="shot" href="assets/nk-pumpkin-porch.jpg" target="_blank" rel="noopener">
-            <img loading="lazy" src="assets/nk-pumpkin-porch.jpg" alt="A restaurant decorated for autumn, with guests in wide hats and a pumpkin patch in the garden" width="1440" height="900">
-            <span>Kitchen garden</span>
-          </a>
-          <a class="shot" href="assets/nk-halloween.jpg" target="_blank" rel="noopener">
-            <img loading="lazy" src="assets/nk-halloween.jpg" alt="A Halloween themed restaurant with dark floors, guests in witch hats and pumpkin decorations" width="1280" height="720">
-            <span>Harvest &amp; Haunts</span>
+          <a class="shot shot-main" href="/assets/nk-copper-pot-day.jpg" target="_blank" rel="noopener">
+            <picture>
+            <source type="image/webp" srcset="/assets/nk-copper-pot-day-720.webp 720w, /assets/nk-copper-pot-day-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 640px">
+            <img src="/assets/nk-copper-pot-day.jpg" alt="A busy lunch rush in a Neighborhood Kitchen restaurant, with guests at every table and three cooks in an open kitchen" width="1440" height="900" loading="lazy">
+          </picture>
           </a>
         </div>
 
@@ -127,7 +113,7 @@
             <h3>Scoops, Slices &amp; Spooky Seats</h3>
             <p>An ice cream counter with six desserts, a working pizzeria oven with four new pizzas, ten matching dining sets and a bigger Halloween collection.</p>
           </div>
-          <a class="btn btn-outline" href="https://isthmusgames.itch.io/neighborhood-kitchen/devlog/1704017/0160-scoops-slices-spooky-seats" target="_blank" rel="noopener">Read the devlog</a>
+          <a class="btn btn-outline" href="/news/">Read the news</a>
         </aside>
       </div>
     </section>
@@ -139,6 +125,7 @@
           <h2>Small studio, narrow strip of land, big plans.</h2>
           <p>IsthmusGames is an independent studio from Panama, the isthmus that joins two continents and separates two oceans. Our emblem is that idea in one picture: a little island shaped like a controller.</p>
           <p>We make warm, unhurried games that respect your time, and we build them in the open with the people who play them.</p>
+          <p><a href="/about/">More about the studio</a></p>
         </div>
         <ul class="values">
           <li>
@@ -163,6 +150,7 @@
           <p class="eyebrow">Follow along</p>
           <h2>Play, follow and support</h2>
         </div>
+        
         <div class="cards">
           <a class="card" href="https://isthmusgames.itch.io/neighborhood-kitchen" target="_blank" rel="noopener">
             <h3>Play on itch.io</h3>
@@ -174,20 +162,55 @@
             <p>Get playtest builds early, vote on the next cuisine and get your name in the credits.</p>
             <span class="card-link">patreon.com/isthmusgames</span>
           </a>
+          <a class="card" href="https://www.youtube.com/@IsthmusGames" target="_blank" rel="noopener">
+            <h3>Watch on YouTube</h3>
+            <p>Trailers and update videos for Neighborhood Kitchen.</p>
+            <span class="card-link">@IsthmusGames</span>
+          </a>
+          <a class="card" href="https://x.com/IsthmusGamesHQ" target="_blank" rel="noopener">
+            <h3>Follow on X</h3>
+            <p>Short updates from the studio between devlogs.</p>
+            <span class="card-link">@IsthmusGamesHQ</span>
+          </a>
         </div>
+        <p class="contact-line">Press or business? Write to <a href="mailto:press@isthmusgames.com">press@isthmusgames.com</a> or see the <a href="/press/">press kit</a>.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-row">
-      <div class="brand">
-        <img src="assets/emblem-island.svg" alt="" width="54" height="32">
-        <span class="wordmark"><span>Isthmus</span><span class="games">Games</span></span>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="brand">
+          <img src="/assets/emblem-island.svg" alt="" width="54" height="32">
+          <span class="wordmark"><span>Isthmus</span><span class="games">Games</span></span>
+        </div>
+        <p>An independent game studio from Panama.</p>
+        <p class="social-row">
+          <a href="https://isthmusgames.itch.io" target="_blank" rel="noopener">itch.io</a>
+          <a href="https://www.patreon.com/isthmusgames" target="_blank" rel="noopener">Patreon</a>
+          <a href="https://www.youtube.com/@IsthmusGames" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://x.com/IsthmusGamesHQ" target="_blank" rel="noopener">X</a>
+        </p>
       </div>
+      <nav aria-label="Footer">
+        <h2>Site</h2>
+        <a href="/neighborhood-kitchen/">Neighborhood Kitchen</a>
+        <a href="/news/">News</a>
+        <a href="/about/">About the studio</a>
+      </nav>
+      <nav aria-label="Press and contact">
+        <h2>Press and contact</h2>
+        <a href="/press/">Press kit</a>
+        <a href="/contact/">Contact</a>
+        <a href="mailto:press@isthmusgames.com">press@isthmusgames.com</a>
+      </nav>
+    </div>
+    <div class="wrap footer-base">
       <p>© 2026 IsthmusGames · Made in Panama</p>
-      <p class="fineprint">Full art, music and software credits for Neighborhood Kitchen are on its <a href="https://isthmusgames.itch.io/neighborhood-kitchen" target="_blank" rel="noopener">itch.io page</a>.</p>
+      <p class="fineprint">This site uses no cookies, analytics or trackers. The trailer loads from YouTube only when you click it.</p>
     </div>
   </footer>
+  <script src="/site.js" defer></script>
 </body>
 </html>
