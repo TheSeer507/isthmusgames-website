@@ -492,6 +492,14 @@ pages.push(page({
 
     <section class="section">
       <div class="wrap prose">
+        <figure class="founder">
+          <img src="/assets/founder-hasan-patel.jpg" alt="Hasan Patel, founder of ${STUDIO}" width="800" height="800" loading="lazy">
+          <figcaption>
+            <h2>Hasan Patel</h2>
+            <p class="tagline">Founder and solo developer</p>
+            <p>Hasan founded ${STUDIO} in Panama and makes Neighborhood Kitchen on his own: the code, the interface text and the updates that land almost every week.</p>
+          </figcaption>
+        </figure>
         <h2>Our story</h2>
         <p>${STUDIO} was founded by Hasan Patel in Panama. The name comes from home: an isthmus is a narrow piece of land with water on both sides, connecting two larger places. Our emblem draws that as a little island shaped like a game controller.</p>
         <p>Our first game, <a href="/neighborhood-kitchen/">Neighborhood Kitchen</a>, is a free cozy restaurant game that runs in the browser.</p>
