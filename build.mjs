@@ -19,6 +19,7 @@ const LINKS = {
   patreon: 'https://www.patreon.com/isthmusgames',
   youtube: 'https://www.youtube.com/@IsthmusGames',
   x: 'https://x.com/IsthmusGamesHQ',
+  reddit: 'https://www.reddit.com/user/IsthmusGamesHQ',
   trailer: `https://youtu.be/${TRAILER_ID}`,
   repo: 'https://github.com/TheSeer507/isthmusgames-website',
 };
@@ -50,7 +51,7 @@ const header = (active) => `
     </div>
   </header>`;
 
-const footer = () => `
+const footer = (trailerNote = false) => `
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
@@ -64,6 +65,7 @@ const footer = () => `
           <a ${ext(LINKS.patreon)}>Patreon</a>
           <a ${ext(LINKS.youtube)}>YouTube</a>
           <a ${ext(LINKS.x)}>X</a>
+          <a ${ext(LINKS.reddit)}>Reddit</a>
         </p>
       </div>
       <nav aria-label="Footer">
@@ -81,7 +83,7 @@ const footer = () => `
     </div>
     <div class="wrap footer-base">
       <p>© 2026 ${STUDIO} · Made in Panama</p>
-      <p class="fineprint">This site uses no cookies, analytics or trackers. The trailer loads from YouTube only when you click it.</p>
+      <p class="fineprint">This site uses no cookies, analytics or trackers.${trailerNote ? ' The trailer loads from YouTube only when you click it.' : ''}</p>
     </div>
   </footer>
   <script src="/site.js" defer></script>`;
@@ -91,7 +93,7 @@ const pictureTag = (name, alt, w, h, { lazy = true, sizes = '(max-width: 900px) 
             <img src="/assets/${name}.jpg" alt="${alt}" width="${w}" height="${h}"${lazy ? ' loading="lazy"' : ' fetchpriority="high"'}>
           </picture>`;
 
-function page({ file, title, desc, active, canonical, body, jsonld = [], preload = '' }) {
+function page({ file, title, desc, active, canonical, body, jsonld = [], preload = '', trailer = false }) {
   const ld = jsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n  ');
   return [file, `<!doctype html>
 <html lang="en">
@@ -120,6 +122,7 @@ function page({ file, title, desc, active, canonical, body, jsonld = [], preload
   <link rel="apple-touch-icon" href="/assets/icon-180.png">
   ${preload}
   <link rel="preload" href="/assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts.css">
   <link rel="stylesheet" href="/styles.css">
   ${ld}
@@ -128,7 +131,7 @@ function page({ file, title, desc, active, canonical, body, jsonld = [], preload
 
   <main id="main">${body}
   </main>
-${footer()}
+${footer(trailer)}
 </body>
 </html>
 `];
@@ -167,7 +170,7 @@ const ORG = {
   description: 'An independent game studio from Panama.',
   foundingLocation: { '@type': 'Country', name: 'Panama' },
   founder: { '@type': 'Person', name: 'Hasan Patel' },
-  sameAs: [LINKS.itch, LINKS.patreon, LINKS.youtube, LINKS.x],
+  sameAs: [LINKS.itch, LINKS.patreon, LINKS.youtube, LINKS.x, LINKS.reddit],
 };
 
 const GAME = {
@@ -226,6 +229,11 @@ const followCards = `
             <h3>Follow on X</h3>
             <p>Short updates from the studio between devlogs.</p>
             <span class="card-link">@IsthmusGamesHQ</span>
+          </a>
+          <a class="card" ${ext(LINKS.reddit)}>
+            <h3>Find us on Reddit</h3>
+            <p>Development notes and replies to player questions.</p>
+            <span class="card-link">u/IsthmusGamesHQ</span>
           </a>
         </div>`;
 
@@ -532,6 +540,7 @@ pages.push(page({
           <p class="eyebrow">Downloads</p>
           <h2>Logos and screenshots</h2>
         </div>
+        <p><a class="btn btn-primary" href="/assets/isthmusgames-press-kit.zip" download>Download everything (ZIP)</a></p>
         <ul class="downloads">
           <li><a href="/assets/emblem.svg" download>Emblem (SVG)</a></li>
           <li><a href="/assets/emblem-island.svg" download>Emblem, no background (SVG)</a></li>

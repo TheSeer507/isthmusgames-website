@@ -113,9 +113,10 @@ p { margin: 0 0 1em; }
 .wordmark {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   color: #fff;
-  -webkit-text-stroke: 5px var(--navy);
+  -webkit-text-stroke: 6px var(--navy);
+  filter: drop-shadow(0 2px 0 var(--navy));
   paint-order: stroke fill;
   letter-spacing: .01em;
   white-space: nowrap;
@@ -543,7 +544,7 @@ p { margin: 0 0 1em; }
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
@@ -598,9 +599,10 @@ p { margin: 0 0 1em; }
   .site-header nav { order: 3; width: 100%; margin: 0; gap: 18px; overflow-x: auto; padding-bottom: 10px; font-size: .95rem; white-space: nowrap; }
   .shots, .shots-wide, .feature-grid, .footer-grid, .downloads { grid-template-columns: 1fr; }
   .facts > div { grid-template-columns: 1fr; gap: 2px; }
-  .wordmark { font-size: 1.2rem; -webkit-text-stroke-width: 4px; }
+  .wordmark { font-size: 1.3rem; -webkit-text-stroke-width: 5px; }
   .brand img { width: 44px; }
   .cards { grid-template-columns: 1fr; }
+  .shots-three { grid-template-columns: 1fr 1fr; }
   .btn { width: 100%; }
   .btn-small { width: auto; }
   .update { padding: 22px; }
