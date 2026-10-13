@@ -313,7 +313,7 @@ pages.push(page({
           <h2>Small studio, narrow strip of land, big plans.</h2>
           <p>${STUDIO} is an independent studio from Panama, the isthmus that joins two continents and separates two oceans. Our emblem is that idea in one picture: a little island shaped like a controller.</p>
           <p>We make warm, unhurried games that respect your time, and we build them in the open with the people who play them.</p>
-          <p><a href="/about/">More about the studio</a></p>
+          <p><a href="/about/">More about the studio</a> · Press and business: <a href="mailto:${PRESS_EMAIL}">${PRESS_EMAIL}</a></p>
         </div>
         <ul class="values">
           <li>
