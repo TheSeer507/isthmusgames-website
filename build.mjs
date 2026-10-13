@@ -175,7 +175,7 @@ const ORG = {
   email: PRESS_EMAIL,
   description: 'An independent game studio from Panama.',
   foundingLocation: { '@type': 'Country', name: 'Panama' },
-  founder: { '@type': 'Person', name: 'Hasan Patel' },
+  founder: { '@type': 'Person', name: 'Hasan Patel', image: `${SITE}/assets/founder-hasan-patel-portrait.jpg` },
   sameAs: [LINKS.itch, LINKS.patreon, LINKS.youtube, LINKS.x, LINKS.reddit],
 };
 
@@ -493,7 +493,7 @@ pages.push(page({
     <section class="section">
       <div class="wrap prose">
         <figure class="founder">
-          <img src="/assets/founder-hasan-patel.jpg" alt="Hasan Patel, founder of ${STUDIO}" width="800" height="800" loading="lazy">
+          <img src="/assets/founder-hasan-patel-portrait.jpg" alt="Hasan Patel, founder of ${STUDIO}" width="800" height="800" loading="lazy">
           <figcaption>
             <h2>Hasan Patel</h2>
             <p class="tagline">Founder and solo developer</p>
