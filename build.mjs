@@ -33,7 +33,7 @@ const NAV = [
 ];
 
 const ICONS = Object.fromEntries(await Promise.all(['itchdotio', 'patreon', 'youtube', 'x', 'reddit'].map(async (n) => {
-  const svg = await fs.readFile(path.join(ROOT, 'assets', 'icons', `.svg`), 'utf8');
+  const svg = await fs.readFile(path.join(ROOT, 'assets', 'icons', `${n}.svg`), 'utf8');
   const d = svg.match(/<path d="([^"]+)"/)[1];
   return [n, `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`];
 })));
