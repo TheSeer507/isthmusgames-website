@@ -20,6 +20,7 @@ const LINKS = {
   youtube: 'https://www.youtube.com/@IsthmusGames',
   x: 'https://x.com/IsthmusGamesHQ',
   reddit: 'https://www.reddit.com/user/IsthmusGamesHQ',
+  discord: 'https://discord.gg/mu7STJRDSa',
   trailer: `https://youtu.be/${TRAILER_ID}`,
   repo: 'https://github.com/TheSeer507/isthmusgames-website',
 };
@@ -32,7 +33,7 @@ const NAV = [
   ['Contact', '/contact/', 'contact'],
 ];
 
-const ICONS = Object.fromEntries(await Promise.all(['itchdotio', 'patreon', 'youtube', 'x', 'reddit'].map(async (n) => {
+const ICONS = Object.fromEntries(await Promise.all(['itchdotio', 'patreon', 'youtube', 'x', 'reddit', 'discord'].map(async (n) => {
   const svg = await fs.readFile(path.join(ROOT, 'assets', 'icons', `${n}.svg`), 'utf8');
   const d = svg.match(/<path d="([^"]+)"/)[1];
   return [n, `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`];
@@ -71,6 +72,7 @@ const footer = (trailerNote = false) => `
           <a ${ext(LINKS.patreon)}>${ICONS.patreon}Patreon</a>
           <a ${ext(LINKS.youtube)}>${ICONS.youtube}YouTube</a>
           <a ${ext(LINKS.x)}>${ICONS.x}X</a>
+          <a ${ext(LINKS.discord)}>${ICONS.discord}Discord</a>
           <a ${ext(LINKS.reddit)}>${ICONS.reddit}Reddit</a>
         </p>
       </div>
@@ -176,7 +178,7 @@ const ORG = {
   description: 'An independent game studio from Panama.',
   foundingLocation: { '@type': 'Country', name: 'Panama' },
   founder: { '@type': 'Person', name: 'Hasan Patel', image: `${SITE}/assets/founder-hasan-patel-portrait.jpg` },
-  sameAs: [LINKS.itch, LINKS.patreon, LINKS.youtube, LINKS.x, LINKS.reddit],
+  sameAs: [LINKS.itch, LINKS.patreon, LINKS.youtube, LINKS.x, LINKS.discord, LINKS.reddit],
 };
 
 const GAME = {
@@ -235,6 +237,11 @@ const followCards = `
             <h3>${ICONS.x}Follow on X</h3>
             <p>Short updates from the studio between devlogs.</p>
             <span class="card-link">@IsthmusGamesHQ</span>
+          </a>
+          <a class="card" ${ext(LINKS.discord)}>
+            <h3>${ICONS.discord}Join our Discord</h3>
+            <p>Chat, report bugs and vote on the next cuisine.</p>
+            <span class="card-link">Isthmus Games server</span>
           </a>
           <a class="card" ${ext(LINKS.reddit)}>
             <h3>${ICONS.reddit}Find us on Reddit</h3>
