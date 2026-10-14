@@ -485,10 +485,10 @@ pages.push(page({
 pages.push(page({
   file: 'about/index.html',
   title: `About | ${STUDIO}`,
-  desc: `${STUDIO} is an independent game studio from Panama, making warm, unhurried games in the open.`,
+  desc: `${STUDIO} is an independent game studio from Panama, the isthmus that joins two continents and separates two oceans.`,
   active: 'about',
   canonical: '/about/',
-  body: `${pageHero('About', 'A studio on the isthmus', 'We are a tiny indie studio in Panama, the narrow strip of land that joins two continents and separates two oceans.')}
+  body: `${pageHero('About', 'A studio on the isthmus', "We're a tiny indie studio in Panama, the narrow strip of land that joins two continents and separates two oceans.")}
 
     <section class="section">
       <div class="wrap prose">
@@ -497,12 +497,13 @@ pages.push(page({
           <figcaption>
             <h2>Hasan Patel</h2>
             <p class="tagline">Founder and solo developer</p>
-            <p>Hasan founded ${STUDIO} in Panama and makes Neighborhood Kitchen on his own: the code, the interface text and the updates that land almost every week.</p>
+            <p>Hasan founded ${STUDIO} in Panama and makes Neighborhood Kitchen on his own, from the code and the interface text to the updates that land almost every week.</p>
           </figcaption>
         </figure>
         <h2>Our story</h2>
-        <p>${STUDIO} was founded by Hasan Patel in Panama. The name comes from home: an isthmus is a narrow piece of land with water on both sides, connecting two larger places. Our emblem draws that as a little island shaped like a game controller.</p>
-        <p>Our first game, <a href="/neighborhood-kitchen/">Neighborhood Kitchen</a>, is a free cozy restaurant game that runs in the browser.</p>
+        <p>The name has two meanings. The first comes from home: an isthmus is a narrow piece of land with water on both sides, connecting two larger places. Panama is one, and our emblem draws that as a little island shaped like a game controller.</p>
+        <p>The second is about the games themselves. We want to be the bridge between the games we grew up with and the games of today. That means the charm and simple joy of classic games, made with modern tools, playable instantly in your browser and shaped in the open with our players.</p>
+        <p>Our first game, <a href="/neighborhood-kitchen/">Neighborhood Kitchen</a>, is a free cozy restaurant game where you grow a kitchen garden, cook dozens of recipes and turn your café into the favorite spot on the block.</p>
         <h2>How we work</h2>
         <ul>
           <li><strong>Free and fair.</strong> Neighborhood Kitchen is free to play, with no ads and no in-game purchases.</li>
