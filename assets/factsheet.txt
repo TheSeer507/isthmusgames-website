@@ -1,0 +1,46 @@
+ISTHMUSGAMES — FACT SHEET
+
+Developer: IsthmusGames, based in Panama
+Founder: Hasan Patel
+Website: https://isthmusgames.com
+Press and business: press@isthmusgames.com
+
+GAME
+Neighborhood Kitchen
+A free cozy restaurant game. Arrange your café, cook 62 recipes and get to know 13 neighbors, right in your browser.
+Latest version: 0.16.0, released October 12, 2026
+Status: In development playtest
+Platform: Web browser on itch.io. Desktop recommended.
+Price: Free, with no ads and no in-game purchases
+Players: Single-player
+Language: English
+Engine: Phaser
+
+FEATURES
+- 62 recipes across starters, mains, drinks, pastries and desserts, each with five mastery levels
+- Cuisines: Italian, Japanese, Mexican, Greek, American Diner and German
+- 13 neighbors with preferences, requests and friendships
+- Six NPC restaurants to visit from level 5
+- Kitchen garden with ten crops
+- Staff: cooks, servers and cleaners
+- Decorate: furniture, floors and walls, room expansion, jukebox, ten matching dining sets
+- Gatherings of six or eight, takeaway
+- Saves kept locally in the browser. No cloud sync.
+
+LINKS
+Play: https://isthmusgames.itch.io/neighborhood-kitchen
+Trailer: https://youtu.be/Tr1kBlrHU5Y
+Devlogs: https://isthmusgames.itch.io/neighborhood-kitchen/devlog
+itch.io: https://isthmusgames.itch.io
+Patreon: https://www.patreon.com/isthmusgames
+YouTube: https://www.youtube.com/@IsthmusGames
+X: https://x.com/IsthmusGamesHQ
+Reddit: https://www.reddit.com/user/IsthmusGamesHQ
+
+CREDITS
+Characters adapted from Chibi Characters by Styloo (CC0).
+Selected furniture and food adapted from KayKit Restaurant Bits by Kay Lousberg (CC0).
+Garden crops by NewLua Studios.
+Music by Kevin MacLeod (CC BY 4.0), plus original pieces.
+AI tools assisted development, including code, interface text and art iteration.
+Full credits are on the itch.io page.
