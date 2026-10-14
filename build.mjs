@@ -269,7 +269,7 @@ pages.push(page({
         <div class="hero-copy">
           <p class="eyebrow">Independent game studio · Panama</p>
           <h1>Cozy games from the land between two oceans.</h1>
-          <p class="lede">We are ${STUDIO}, a tiny indie studio in Panama. Our first game, <strong>Neighborhood Kitchen</strong>, is out now and free to play in your browser.</p>
+          <p class="lede">We're a tiny indie studio in Panama, the narrow strip of land that joins two continents and separates two oceans.</p>
           <div class="actions">
             <a class="btn btn-primary" ${ext(LINKS.game)}>Play Neighborhood Kitchen</a>
             <a class="btn btn-ghost" href="/neighborhood-kitchen/">About the game</a>
