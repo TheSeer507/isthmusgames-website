@@ -15,7 +15,10 @@ const LINKS = {
   itch: 'https://isthmusgames.itch.io',
   game: 'https://isthmusgames.itch.io/neighborhood-kitchen',
   devlogs: 'https://isthmusgames.itch.io/neighborhood-kitchen/devlog',
-  latestDevlog: 'https://isthmusgames.itch.io/neighborhood-kitchen/devlog/1704017/0160-scoops-slices-spooky-seats',
+  latestDevlog: 'https://isthmusgames.itch.io/neighborhood-kitchen/devlog/1709767/0170-autumn2-autumn-flavors-cozy-corners-2026-keepsakes',
+  devlog016: 'https://isthmusgames.itch.io/neighborhood-kitchen/devlog/1704017/0160-scoops-slices-spooky-seats',
+  armoury: 'https://isthmusgames.itch.io/medieval-armoury',
+  hearth: 'https://isthmusgames.itch.io/',
   patreon: 'https://www.patreon.com/isthmusgames',
   youtube: 'https://www.youtube.com/@IsthmusGames',
   x: 'https://x.com/IsthmusGamesHQ',
@@ -154,7 +157,7 @@ const pageHero = (eyebrow, h1, lede) => `
       </div>
     </section>`;
 
-const facade = `<button class="facade" type="button" data-yt="${TRAILER_ID}" data-title="Neighborhood Kitchen 0.16 trailer" aria-label="Play the Neighborhood Kitchen trailer">
+const facade = `<button class="facade" type="button" data-yt="${TRAILER_ID}" data-title="Neighborhood Kitchen trailer" aria-label="Play the Neighborhood Kitchen trailer">
             <picture>
               <source type="image/webp" srcset="/assets/nk-copper-pot-evening-720.webp 720w, /assets/nk-copper-pot-evening-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 760px">
               <img src="/assets/nk-copper-pot-evening.jpg" alt="" width="1440" height="900" loading="lazy">
@@ -186,7 +189,7 @@ const GAME = {
   '@type': 'VideoGame',
   name: 'Neighborhood Kitchen',
   url: `${SITE}/neighborhood-kitchen/`,
-  description: 'A free cozy restaurant game. Arrange your café, cook 62 recipes and get to know 13 neighbors, right in your browser.',
+  description: 'A free cozy restaurant game. Arrange your café, cook 66 recipes and get to know 13 neighbors, right in your browser.',
   image: `${SITE}/assets/nk-copper-pot-day.jpg`,
   genre: ['Simulation', 'Casual'],
   gamePlatform: 'Web browser',
@@ -194,11 +197,11 @@ const GAME = {
   operatingSystem: 'Any (web browser)',
   playMode: 'SinglePlayer',
   inLanguage: 'en',
-  softwareVersion: '0.16.0',
+  softwareVersion: '0.17.0-autumn.2',
   author: { '@type': 'Organization', name: STUDIO, url: SITE },
   publisher: { '@type': 'Organization', name: STUDIO, url: SITE },
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: LINKS.game },
-  trailer: { '@type': 'VideoObject', name: 'Neighborhood Kitchen 0.16 trailer', embedUrl: `https://www.youtube-nocookie.com/embed/${TRAILER_ID}`, url: LINKS.trailer, thumbnailUrl: `${SITE}/assets/nk-copper-pot-evening.jpg` },
+  trailer: { '@type': 'VideoObject', name: 'Neighborhood Kitchen trailer', embedUrl: `https://www.youtube-nocookie.com/embed/${TRAILER_ID}`, url: LINKS.trailer, thumbnailUrl: `${SITE}/assets/nk-copper-pot-evening.jpg` },
 };
 
 const FAQ = [
@@ -247,6 +250,21 @@ const followCards = `
             <h3>${ICONS.reddit}Find us on Reddit</h3>
             <p>Development notes and replies to player questions.</p>
             <span class="card-link">u/IsthmusGamesHQ</span>
+          </a>
+        </div>`;
+
+const assetPackCards = `
+        <div class="cards">
+          <a class="card" ${ext(LINKS.armoury)}>
+            <h3>Medieval Armoury</h3>
+            <p>Seven medieval weapons: a longsword, arming sword, quillon dagger, rondel dagger, great axe, war hammer and flanged mace. Each comes with Blender sources, an Unreal Engine project, textures, FBX LODs, GLB models and collision. It's free to download, with an optional donation.</p>
+            <p class="fineprint">Contains AI-assisted content.</p>
+            <span class="card-link">Get Medieval Armoury</span>
+          </a>
+          <a class="card" ${ext(LINKS.hearth)}>
+            <h3>Hearth &amp; Hops – Cozy Tavern</h3>
+            <p>A cozy tavern asset pack.</p>
+            <span class="card-link">See it on itch.io</span>
           </a>
         </div>`;
 
@@ -300,7 +318,7 @@ pages.push(page({
           <div class="game-copy">
             <p>Start with a tiny corner café and make it yours. Arrange the tables, choose your dishes and watch your chibi team cook, serve and clean.</p>
             <ul class="stats">
-              <li><strong>62</strong><span>recipes to discover and master</span></li>
+              <li><strong>66</strong><span>recipes to discover and master</span></li>
               <li><strong>13</strong><span>neighbors to get to know</span></li>
               <li><strong>6</strong><span>neighbor restaurants to visit</span></li>
               <li><strong>Free</strong><span>no ads, no in-game purchases</span></li>
@@ -318,12 +336,23 @@ pages.push(page({
 
         <aside class="update">
           <div>
-            <p class="eyebrow">Latest update · 0.16.0</p>
-            <h3>Scoops, Slices &amp; Spooky Seats</h3>
-            <p>An ice cream counter with six desserts, a working pizzeria oven with four new pizzas, ten matching dining sets and a bigger Halloween collection.</p>
+            <p class="eyebrow">Latest update · 0.17.0-autumn.2</p>
+            <h3>Autumn flavors, cozy corners &amp; 2026 keepsakes</h3>
+            <p>Four autumn recipes, eight new decorations, three keepsake achievements and an Autumn 2026 Founder title for everyone who plays this season.</p>
           </div>
           <a class="btn btn-outline" href="/news/">Read the news</a>
         </aside>
+      </div>
+    </section>
+
+    <section class="section section-packs" id="asset-packs">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">For game makers</p>
+          <h2>Asset packs for game makers</h2>
+          <p>We also share the 3D assets we build, so other developers can use them in their own projects.</p>
+        </div>
+        ${assetPackCards}
       </div>
     </section>
 
@@ -368,7 +397,7 @@ pages.push(page({
 pages.push(page({
   file: 'neighborhood-kitchen/index.html',
   title: `Neighborhood Kitchen | Free cozy restaurant game by ${STUDIO}`,
-  desc: 'Neighborhood Kitchen is a free cozy restaurant game. Arrange your café, cook 62 recipes and get to know 13 neighbors, right in your browser.',
+  desc: 'Neighborhood Kitchen is a free cozy restaurant game. Arrange your café, cook 66 recipes and get to know 13 neighbors, right in your browser.',
   active: 'game',
   canonical: '/neighborhood-kitchen/',
   jsonld: [GAME, FAQ_LD],
@@ -398,7 +427,7 @@ pages.push(page({
           </div>
           <div>
             <h3>Craft your own menu</h3>
-            <p>Discover 62 recipes across starters, mains, drinks, pastries and desserts, and build each one to mastery level 5.</p>
+            <p>Discover 66 recipes across starters, mains, drinks, pastries and desserts, and build each one to mastery level 5.</p>
           </div>
           <div>
             <h3>Run any kind of kitchen</h3>
@@ -452,7 +481,7 @@ pages.push(page({
           <div><dt>Price</dt><dd>Free, with no ads and no in-game purchases</dd></div>
           <div><dt>Platform</dt><dd>Web browser on itch.io. Desktop recommended.</dd></div>
           <div><dt>Players</dt><dd>Single-player</dd></div>
-          <div><dt>Status</dt><dd>In development playtest, version 0.16.0</dd></div>
+          <div><dt>Status</dt><dd>In development playtest, version 0.17.0-autumn.2</dd></div>
           <div><dt>Language</dt><dd>English</dd></div>
           <div><dt>Engine</dt><dd>Phaser</dd></div>
         </dl>
@@ -474,15 +503,21 @@ pages.push(page({
   desc: `Devlogs and update news from ${STUDIO}, the studio behind Neighborhood Kitchen.`,
   active: 'news',
   canonical: '/news/',
-  body: `${pageHero('News', 'Updates from the kitchen', 'Neighborhood Kitchen is updated almost every week. The newest devlog is below.')}
+  body: `${pageHero('News', 'Updates from the kitchen', 'Neighborhood Kitchen is updated almost every week. The newest devlogs are below.')}
 
     <section class="section">
       <div class="wrap narrow">
         <article class="news-item">
+          <p class="eyebrow">October 15, 2026 · Version 0.17.0-autumn.2</p>
+          <h2>Autumn flavors, cozy corners &amp; 2026 keepsakes</h2>
+          <p>Autumn has arrived in the neighborhood. This update adds four autumn recipes and eight new decorations for a cozy corner. It also brings three keepsake achievements (Autumn Apprentice, Harvest Master and Haunted Host) and an Autumn 2026 Founder title for everyone who plays this season. First services are gentler too, building on the 0.16.1 changes for new players. The autumn event is open now with no closing date, so there's no rush. As always, we read you, we hear you.</p>
+          <a class="btn btn-outline" ${ext(LINKS.latestDevlog)}>Read the full devlog</a>
+        </article>
+        <article class="news-item">
           <p class="eyebrow">October 12, 2026 · Version 0.16.0</p>
           <h2>Scoops, Slices &amp; Spooky Seats</h2>
           <p>A pizza fresh from the oven, a sundae after supper, and a dining room that feels like yours. This update adds an ice cream counter with six desserts, a working pizzeria oven with four new pizzas, ten matching dining sets and a bigger Halloween collection.</p>
-          <a class="btn btn-outline" ${ext(LINKS.latestDevlog)}>Read the full devlog</a>
+          <a class="btn btn-outline" ${ext(LINKS.devlog016)}>Read the full devlog</a>
         </article>
         <p class="contact-line">Older devlogs are on <a ${ext(LINKS.devlogs)}>itch.io</a>.</p>
       </div>
@@ -519,7 +554,8 @@ pages.push(page({
           <li><strong>Honest about tools.</strong> AI tools assisted development, including code, interface text and art iteration. The game does not generate content with AI while you play.</li>
         </ul>
         <h2>Get in touch</h2>
-        <p>Write to <a href="mailto:${PRESS_EMAIL}">${PRESS_EMAIL}</a>, or see the <a href="/contact/">contact page</a> for where to find us.</p>
+        <p>Write to <a href="mailto:${PRESS_EMAIL}">${PRESS_EMAIL}</a>, or find us on any of these:</p>
+        ${followCards}
       </div>
     </section>`,
 }));
@@ -539,7 +575,7 @@ pages.push(page({
           <div><dt>Developer</dt><dd>${STUDIO}, based in Panama</dd></div>
           <div><dt>Founder</dt><dd>Hasan Patel</dd></div>
           <div><dt>Game</dt><dd>Neighborhood Kitchen</dd></div>
-          <div><dt>Latest version</dt><dd>0.16.0, released October 12, 2026</dd></div>
+          <div><dt>Latest version</dt><dd>0.17.0-autumn.2, released October 15, 2026</dd></div>
           <div><dt>Status</dt><dd>In development playtest</dd></div>
           <div><dt>Platform</dt><dd>Web browser on itch.io. Desktop recommended.</dd></div>
           <div><dt>Price</dt><dd>Free, with no ads and no in-game purchases</dd></div>
@@ -548,10 +584,16 @@ pages.push(page({
           <div><dt>Press contact</dt><dd><a href="mailto:${PRESS_EMAIL}">${PRESS_EMAIL}</a></dd></div>
         </dl>
         <h2>Description</h2>
-        <p><strong>Short:</strong> Neighborhood Kitchen is a free cozy restaurant game by ${STUDIO}, an independent studio from Panama. Arrange your café, cook 62 recipes and get to know 13 neighbors, right in your browser.</p>
+        <p><strong>Short:</strong> Neighborhood Kitchen is a free cozy restaurant game by ${STUDIO}, an independent studio from Panama. Arrange your café, cook 66 recipes and get to know 13 neighbors, right in your browser.</p>
         <p><strong>Long:</strong> Start with a tiny corner café and make it yours. Arrange the tables, choose your dishes and watch your chibi team cook, serve and clean. Run an Italian trattoria, a Japanese kitchen, a Greek taverna or an all-day diner, grow ingredients in the kitchen garden, and turn first-time guests into neighborhood regulars. The game is free to play with no ads and no in-game purchases, and new updates land almost every week.</p>
         <h2>Trailer</h2>
-        <p><a ${ext(LINKS.trailer)}>Neighborhood Kitchen 0.16 trailer on YouTube</a></p>
+        <p><a ${ext(LINKS.trailer)}>Neighborhood Kitchen trailer on YouTube</a></p>
+        <h2>Asset packs</h2>
+        <p>${STUDIO} also shares the 3D assets it builds for other game makers.</p>
+        <ul>
+          <li><a ${ext(LINKS.armoury)}>Medieval Armoury</a>: seven medieval weapons with Blender sources, an Unreal Engine project, textures, FBX LODs, GLB models and collision. Free to download, with an optional donation. Contains AI-assisted content.</li>
+          <li><a ${ext(LINKS.hearth)}>Hearth &amp; Hops – Cozy Tavern</a>: a cozy tavern asset pack.</li>
+        </ul>
       </div>
     </section>
 

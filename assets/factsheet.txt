@@ -7,8 +7,8 @@ Press and business: press@isthmusgames.com
 
 GAME
 Neighborhood Kitchen
-A free cozy restaurant game. Arrange your café, cook 62 recipes and get to know 13 neighbors, right in your browser.
-Latest version: 0.16.0, released October 12, 2026
+A free cozy restaurant game. Arrange your café, cook 66 recipes and get to know 13 neighbors, right in your browser.
+Latest version: 0.17.0-autumn.2, released October 15, 2026
 Status: In development playtest
 Platform: Web browser on itch.io. Desktop recommended.
 Price: Free, with no ads and no in-game purchases
@@ -17,7 +17,7 @@ Language: English
 Engine: Phaser
 
 FEATURES
-- 62 recipes across starters, mains, drinks, pastries and desserts, each with five mastery levels
+- 66 recipes across starters, mains, drinks, pastries and desserts, each with five mastery levels
 - Cuisines: Italian, Japanese, Mexican, Greek, American Diner and German
 - 13 neighbors with preferences, requests and friendships
 - Six NPC restaurants to visit from level 5
@@ -26,6 +26,13 @@ FEATURES
 - Decorate: furniture, floors and walls, room expansion, jukebox, ten matching dining sets
 - Gatherings of six or eight, takeaway
 - Saves kept locally in the browser. No cloud sync.
+
+LATEST UPDATE: 0.17.0-autumn.2, Autumn flavors, cozy corners & 2026 keepsakes
+Four autumn recipes, eight new decorations, three keepsake achievements (Autumn Apprentice, Harvest Master and Haunted Host) and an Autumn 2026 Founder title for everyone who plays this season.
+
+ASSET PACKS
+- Medieval Armoury: seven medieval weapons with Blender sources, an Unreal Engine project, textures, FBX LODs, GLB models and collision. Free to download, with an optional donation. Contains AI-assisted content. https://isthmusgames.itch.io/medieval-armoury
+- Hearth & Hops – Cozy Tavern: a cozy tavern asset pack. https://isthmusgames.itch.io/
 
 LINKS
 Play: https://isthmusgames.itch.io/neighborhood-kitchen

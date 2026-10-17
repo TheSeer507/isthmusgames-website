@@ -263,6 +263,9 @@ p { margin: 0 0 1em; }
 
 .contact-line { margin-top: 2em; }
 
+.section-packs { border-top: 3px solid var(--line); }
+.card .fineprint { margin: -.4em 0 .8em; }
+
 /* Founder */
 
 .founder {
